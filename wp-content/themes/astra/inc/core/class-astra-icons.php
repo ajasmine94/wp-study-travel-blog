@@ -35,6 +35,7 @@ class Astra_Icons {
 	 */
 	public static function is_svg_icons() {
 		$astra_settings                               = get_option( ASTRA_THEME_SETTINGS );
+		$astra_settings 							  = ($astra_settings == FALSE) ? [] : $astra_settings;
 		$astra_settings['can-update-astra-icons-svg'] = ( isset( $astra_settings['can-update-astra-icons-svg'] ) && false === $astra_settings['can-update-astra-icons-svg'] ) ? false : true;
 		return apply_filters( 'astra_is_svg_icons', $astra_settings['can-update-astra-icons-svg'] );
 	}
