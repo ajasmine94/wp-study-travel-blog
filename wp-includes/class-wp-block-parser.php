@@ -12,6 +12,7 @@
  *
  * @since 5.0.0
  */
+
 class WP_Block_Parser_Block {
 	/**
 	 * Name of block
@@ -409,13 +410,13 @@ class WP_Block_Parser {
 		 * a closer has no attributes). we can trap them both and process the
 		 * match back in PHP to see which one it was.
 		 */
-		$has_match = preg_match(
+		$has_match = (preg_match(
 			'/<!--\s+(?P<closer>\/)?wp:(?P<namespace>[a-z][a-z0-9_-]*\/)?(?P<name>[a-z][a-z0-9_-]*)\s+(?P<attrs>{(?:(?:[^}]+|}+(?=})|(?!}\s+\/?-->).)*+)?}\s+)?(?P<void>\/)?-->/s',
-			$this->document,
+			!is_null($this->document) ? $this->document : "",
 			$matches,
 			PREG_OFFSET_CAPTURE,
 			$this->offset
-		);
+		) === 1) ? 1 : 0;
 
 		// if we get here we probably have catastrophic backtracking or out-of-memory in the PCRE.
 		if ( false === $has_match ) {
@@ -486,7 +487,7 @@ class WP_Block_Parser {
 	 * @param null $length how many bytes of document text to output.
 	 */
 	public function add_freeform( $length = null ) {
-		$length = $length ? $length : strlen( $this->document ) - $this->offset;
+		$length = $length ? $length : strlen( (!is_null($this->document) ? $this->document : "") ) - $this->offset;
 
 		if ( 0 === $length ) {
 			return;
