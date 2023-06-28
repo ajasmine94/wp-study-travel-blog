@@ -12,8 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-#[\AllowDynamicProperties]
-
 /**
  * Class Ajax_Init.
  */
