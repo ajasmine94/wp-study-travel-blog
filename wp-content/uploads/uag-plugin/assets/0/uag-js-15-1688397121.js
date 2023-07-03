@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){ jQuery(document).ready
 			});window.addEventListener("DOMContentLoaded", function(){
 	UAGBForms.init( {"block_id":"4fb24ff0","reCaptchaEnable":false,"reCaptchaType":"v2","reCaptchaSiteKeyV2":"","reCaptchaSecretKeyV2":"","reCaptchaSiteKeyV3":"","reCaptchaSecretKeyV3":"","afterSubmitToEmail":"ang.jasmsine94@gmail.com","afterSubmitCcEmail":"","afterSubmitBccEmail":"","afterSubmitEmailSubject":"Form Submission - Testing Wordpress","sendAfterSubmitEmail":true,"confirmationType":"message","hidereCaptchaBatch":false,"captchaMessage":"Please fill up the above captcha.","confirmationUrl":""}, '.uagb-block-4fb24ff0', 15 );
 });
-var ssLinks = document.querySelectorAll( '.uagb-block-861199ac' );
+var ssLinks = document.querySelectorAll( '.uagb-block-eb31fade' );
 for ( var j = 0; j < ssLinks.length; j++ ) {
 	var ssLink = ssLinks[j].querySelectorAll( ".uagb-ss__link" );
 	for ( var i = 0; i < ssLink.length; i++ ) {
