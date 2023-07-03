@@ -10,7 +10,7 @@ for ( var j = 0; j < ssLinks.length; j++ ) {
 			}
 			var  request_url ="";
 			if( social_url.indexOf("/pin/create/link/?url=") !== -1) {
-				request_url = social_url + encodeURIComponent( window.location.href ) + "&media=" + 'http://localhost/wordpress/wp-study-travel-blog/wp-content/uploads/2023/07/Edinburgh.jpg';
+				request_url = social_url + encodeURIComponent( window.location.href ) + "&media=" + 'http://localhost/wordpress/wp-study-travel-blog/wp-content/uploads/2023/07/chiang-rai.jpg';
 			}else{
 				request_url = social_url + encodeURIComponent( window.location.href );
 			}
